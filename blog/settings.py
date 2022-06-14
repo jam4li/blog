@@ -56,9 +56,8 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # TODO: Check the best dirs
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -118,7 +117,6 @@ TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 
-# TODO: Check what is USE_L10N
 USE_L10N = True
 
 USE_TZ = True
